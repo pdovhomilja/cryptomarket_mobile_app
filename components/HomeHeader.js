@@ -18,11 +18,15 @@ const HomeHeader = ({ onSearch }) => {
           alignItems: "center",
         }}
       >
-        <Image
-          source={assets.logo}
-          resizeMode="contain"
-          style={{ width: 90, height: 25 }}
-        />
+        <Text
+          style={{
+            color: COLORS.white,
+            fontWeight: "bold",
+            fontSize: SIZES.large,
+          }}
+        >
+          ShowRoom Dapp
+        </Text>
 
         <View style={{ width: 45, height: 45 }}>
           <Image
