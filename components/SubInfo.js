@@ -45,6 +45,7 @@ export const EthPrice = ({ price }) => {
       >
         {price}
       </Text>
+      <Text style={{ fontWeight: "bold" }}> MATIC</Text>
     </View>
   );
 };
@@ -76,6 +77,8 @@ export const People = () => {
 };
 
 export const EndDate = () => {
+  const date = new Date();
+
   return (
     <View
       style={{
@@ -106,7 +109,7 @@ export const EndDate = () => {
           color: COLORS.primary,
         }}
       >
-        12h 30m
+        {date.toLocaleTimeString()}
       </Text>
     </View>
   );

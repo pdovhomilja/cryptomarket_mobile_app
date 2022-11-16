@@ -1,0 +1,12 @@
+{"metadata": 
+    {
+        "attributes": [[Object], [Object], [Object], [Object]], 
+        "description": "A PAPAFAM Ape", 
+        "id": "19", 
+        "image": "https://gateway.ipfscdn.io/ipfs/QmecgHz9dM171cR4JxSaw2B3uzWtQvLYjhBzNZJ3N1EX2c/19.png", 
+        "name": "#19", 
+        "uri": "ipfs://QmPTcgumTsaPX7kwvF4Q35J2HWdAkZcaHeyVR2nPuvJQKU/19"}, 
+        "owner": "0x0000000000000000000000000000000000000000", 
+        "supply": 1, 
+        "type": "ERC721"
+    }

@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
-import { View, Image } from "react-native";
+import { View, Image, Text } from "react-native";
+import { ethers } from "ethers";
 
 import { COLORS, SIZES, SHADOWS, assets } from "../constants";
 import { SubInfo, EthPrice, NFTTitle } from "./SubInfo";
@@ -8,6 +9,7 @@ import { RectButton, CircleButton } from "./Button";
 
 const NFTCard = ({ data }) => {
   const navigation = useNavigation();
+  //console.log(data.secondsUntilEnd);
 
   return (
     <View
@@ -26,7 +28,8 @@ const NFTCard = ({ data }) => {
         }}
       >
         <Image
-          source={data.image}
+          source={{ uri: data.asset.image }}
+          //source={data.image}
           resizeMode="cover"
           style={{
             width: "100%",
@@ -35,7 +38,6 @@ const NFTCard = ({ data }) => {
             borderTopRightRadius: SIZES.font,
           }}
         />
-
         <CircleButton imgUrl={assets.heart} right={10} top={10} />
       </View>
 
@@ -43,8 +45,8 @@ const NFTCard = ({ data }) => {
 
       <View style={{ width: "100%", padding: SIZES.font }}>
         <NFTTitle
-          title={data.name}
-          subTitle={data.creator}
+          title={data.asset.name}
+          subTitle={data.sellerAddress}
           titleSize={SIZES.large}
           subTitleSize={SIZES.small}
         />
@@ -57,7 +59,9 @@ const NFTCard = ({ data }) => {
             alignItems: "center",
           }}
         >
-          <EthPrice price={data.price} />
+          <EthPrice
+            price={ethers.utils.formatEther(data.buyoutPrice.toNumber())}
+          />
           <RectButton
             minWidth={120}
             fontSize={SIZES.font}

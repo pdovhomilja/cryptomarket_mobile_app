@@ -26,9 +26,11 @@ const HomeHeader = ({ onSearch }) => {
 
         <View style={{ width: 45, height: 45 }}>
           <Image
-            source={assets.person01}
+            source={{
+              uri: "https://pbs.twimg.com/profile_images/1318823293831548931/MbCjkP55_400x400.jpg",
+            }}
             resizeMode="contain"
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: "100%", height: "100%", borderRadius: 45 / 2 }}
           />
           <Image
             source={assets.badge}
@@ -52,7 +54,7 @@ const HomeHeader = ({ onSearch }) => {
             color: COLORS.white,
           }}
         >
-          Hello Victoria 👋
+          {/*address ? (Hi, { address }) : "Hello Victoria 👋"*/}
         </Text>
 
         <Text
